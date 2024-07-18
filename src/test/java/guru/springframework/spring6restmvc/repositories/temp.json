@@ -1,0 +1,52 @@
+[
+  {
+    "codes": [
+      "NotNull.ciderDTO.ciderName",
+      "NotNull.ciderName",
+      "NotNull.java.lang.String",
+      "NotNull"
+    ],
+    "arguments": [
+      {
+        "codes": [
+          "ciderDTO.ciderName",
+          "ciderName"
+        ],
+        "arguments": null,
+        "defaultMessage": "ciderName",
+        "code": "ciderName"
+      }
+    ],
+    "defaultMessage": "must not be null",
+    "objectName": "ciderDTO",
+    "field": "ciderName",
+    "rejectedValue": null,
+    "bindingFailure": false,
+    "code": "NotNull"
+  },
+  {
+    "codes": [
+      "NotBlank.ciderDTO.ciderName",
+      "NotBlank.ciderName",
+      "NotBlank.java.lang.String",
+      "NotBlank"
+    ],
+    "arguments": [
+      {
+        "codes": [
+          "ciderDTO.ciderName",
+          "ciderName"
+        ],
+        "arguments": null,
+        "defaultMessage": "ciderName",
+        "code": "ciderName"
+      }
+    ],
+    "defaultMessage": "must not be blank",
+    "objectName": "ciderDTO",
+    "field": "ciderName",
+    "rejectedValue": null,
+    "bindingFailure": false,
+    "code": "NotBlank"
+  }
+]
