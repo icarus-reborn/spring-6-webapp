@@ -28,7 +28,7 @@ class CiderRepositoryTest {
 
         assertThrows(ConstraintViolationException.class, () -> {
             Cider savedCider = ciderRepository.save(Cider.builder()
-                    .ciderName("your bitch madllong nooooooooooooooooooooooooooooooooow")
+                    .ciderName("your eee madllong nooooooooooooooooooooooooooooooooow")
                     .ciderStyle(CiderStyle.Apple)
                     .upc("wegettingmoney")
                     .price(new BigDecimal("12.99"))
@@ -41,7 +41,7 @@ class CiderRepositoryTest {
     @Test
     void testSavedCider() {
     Cider savedCider = ciderRepository.save(Cider.builder()
-            .ciderName("your bitch")
+            .ciderName("your eee")
             .ciderStyle(CiderStyle.Apple)
             .upc("wegettingmoney")
             .price(new BigDecimal("12.99"))
