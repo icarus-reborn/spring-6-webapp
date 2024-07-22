@@ -9,11 +9,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.test.context.ActiveProfiles;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
+@ActiveProfiles("localmysql")
 @Import(CiderCsvServiceImpl.class)
 class BootstrapDataTest {
 
@@ -37,8 +39,8 @@ class BootstrapDataTest {
     void TestRun() throws Exception {
         bootstrapData.run(null);
 
-        assertThat(customerRepository.count()).isEqualTo(2413);
-        assertThat(ciderRepository.count()).isEqualTo(3);
+        assertThat(customerRepository.count()).isEqualTo(3);
+        assertThat(ciderRepository.count()).isEqualTo(2413);
     }
 
 

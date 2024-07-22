@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 //@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @DataJpaTest
-@ActiveProfiles("test")
+@ActiveProfiles("localmysql")
 @Import({BootstrapData.class, CustomerServiceImpl.class})
 class CustomerRepositoryTest {
     @Autowired

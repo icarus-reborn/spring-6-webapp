@@ -2,6 +2,7 @@ package guru.springframework.spring6restmvc.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import guru.springframework.spring6restmvc.model.CiderDTO;
+import guru.springframework.spring6restmvc.repositories.CiderRepository;
 import guru.springframework.spring6restmvc.service.CiderService;
 import guru.springframework.spring6restmvc.service.CiderServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,13 +35,16 @@ import java.util.UUID;
 
 //import static org.junit.jupiter.api.Assertions.*;
 
-@ActiveProfiles("test")
+@ActiveProfiles("localmysql")
 //@SpringBootTest
-@WebMvcTest(CiderController.class)
+@WebMvcTest({CiderController.class, CiderRepository.class})
 class CiderControllerTest {
 
     //@Autowired
     //CiderController ciderController;
+    @Autowired
+    CiderRepository ciderRepository;
+
     @Autowired
     MockMvc mockMvc;
 
