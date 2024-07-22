@@ -1,4 +1,4 @@
-select user, host from mysql.user;
+--select user, host from mysql.user;
 
 DROP DATABASE IF EXISTS restdb;
 DROP USER IF EXISTS `restadmin`@`%`;
