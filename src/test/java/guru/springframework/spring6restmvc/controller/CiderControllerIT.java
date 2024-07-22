@@ -16,6 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
@@ -41,12 +42,14 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 //import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-
-//@SpringBootTest(classes = CiderControllerIT.class)
-@DataJpaTest
-@ActiveProfiles("localmysql")
 //@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+//@SpringBootTest(classes = CiderControllerIT.class)
+//@DataJpaTest
+@ActiveProfiles("localmysql")
+@SpringBootTest
 class CiderControllerIT {
+
+
 
     @Autowired
     CiderController ciderController;
@@ -54,11 +57,18 @@ class CiderControllerIT {
     @Autowired
     CiderRepository ciderRepository;
 
+
+
     @Autowired
     CiderMapper ciderMapper;
 
+
+
     @Autowired
     ObjectMapper objectMapper;
+
+
+
     @Autowired
     WebApplicationContext wac;
 

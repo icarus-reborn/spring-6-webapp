@@ -28,6 +28,8 @@ import java.util.UUID;
 @Component
 @RequiredArgsConstructor
 public class BootstrapData implements CommandLineRunner {
+
+
     private final CiderRepository ciderRepository;
     private final CustomerRepository customerRepository;
     private final CiderCsvService ciderCsvService;

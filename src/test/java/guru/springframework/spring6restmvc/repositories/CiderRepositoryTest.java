@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-//@ActiveProfiles("test")
+@ActiveProfiles("localmysql")
 @DataJpaTest
 @Import({BootstrapData.class, CiderCsvServiceImpl.class})
 class CiderRepositoryTest {
